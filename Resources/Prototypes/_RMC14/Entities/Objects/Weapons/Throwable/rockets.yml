@@ -1,0 +1,43 @@
+# Muntion / Player Facing
+
+- type: entity
+  id: CMCartridgeRocket84HE
+  name: 84mm Rocket High Explosive
+  parent: BaseItem
+  description: A rocket tube loaded with a HE warhead. Deals high damage to soft targets on direct hit and stuns most targets in a 5-meter-wide area for a short time. Has decreased effect on heavily armored targets.
+  components:
+  - type: Tag
+    tags:
+      - CMRocket84mm
+  - type: Item
+    size: Large
+  - type: CartridgeAmmo
+    proto: CMBulletRocket84HE
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/Rocket_Projectiles/84mm.rsi
+    state: 84mmHE
+
+# Projectile Logic / Game Facing
+
+- type: entity
+  id: CMBulletRocket84HE
+  name: 84mm rocket
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/Rocket_Projectiles/84mm.rsi
+    layers:
+      - state: 84mm
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: RMC
+    maxIntensity: 800
+    intensitySlope: 12
+    totalIntensity: 500
+    canCreateVacuum: false
+  - type: PointLight
+    radius: 8
+    color: orange
+    energy: 0.8

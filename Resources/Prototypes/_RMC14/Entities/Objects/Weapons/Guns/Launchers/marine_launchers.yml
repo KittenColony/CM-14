@@ -99,3 +99,42 @@
   - type: GunRequiresWield
   - type: RMCNameItemOnVend
     item: PrimaryGun
+
+
+- type: entity
+  name: M5 RPG
+  parent: [BaseWeaponLauncher, CMBaseWeaponGun]
+  id: CMWeaponLauncherM5
+  description: The M5 RPG is the primary anti-armor weapon of the UNCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses. Rockets can't be removed once loaded.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/RocketLaunchers/M5.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _RMC14/Objects/Weapons/Guns/RocketLaunchers/M5.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: Gun
+    minAngle: 0
+    maxAngle: 1
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: BallisticAmmoProvider
+    cycleable: false
+    whitelist:
+      tags:
+        - CMRocket84mm
+    proto: CMCartridgeRocket84HE
+    capacity: 1
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: Appearance
+  - type: Wieldable
+  - type: GunRequiresWield
+  - type: GunShowUseDelay
+  - type: UseDelay
+    delay: 2
