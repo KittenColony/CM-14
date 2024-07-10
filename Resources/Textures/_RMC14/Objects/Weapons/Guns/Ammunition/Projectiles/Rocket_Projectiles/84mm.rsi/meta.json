@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from cmss13 at https://github.com/cmss13-devs/cmss13/blob/bd18351f7738224350315f9c71d0c54e68cb8905/icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi, modified by KittenColony",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "84mm"
+    },
+    {
+      "name": "84mmAP"
+    },
+    {
+      "name": "84mmHE"
+    }
+  ]
+}

@@ -18,6 +18,25 @@
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/Rocket_Projectiles/84mm.rsi
     state: 84mmHE
 
+- type: entity
+  id: CMCartridgeRocket84HE
+  name: 84mm Rocket Solid Shot
+  parent: BaseItem
+  description: A rocket tube without the standard warhead. In it's place is a solid penetrator made of depleted uranium and tungsten. Eviscerates the first thing it comes into contact with before spalling into harmless fragments 
+  components:
+  - type: Tag
+    tags:
+      - CMRocket84mm
+  - type: Item
+    size: Large
+  - type: CartridgeAmmo
+    proto: CMBulletRocket84AP
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/Rocket_Projectiles/84mm.rsi
+    state: 84mmAP
+
+
 # Projectile Logic / Game Facing
 
 - type: entity
@@ -40,4 +59,25 @@
   - type: PointLight
     radius: 8
     color: orange
+    energy: 0.8
+
+- type: entity
+  id: CMBulletRocket84AP
+  name: 84mm rocket
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/Rocket_Projectiles/84mm.rsi
+    layers:
+      - state: 84mm
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10000
+  - type: CMArmorPiercing
+    amount: 100
+  - type: PointLight
+    radius: 8
+    color: green
     energy: 0.8
