@@ -167,7 +167,7 @@
 - type: entity
   parent: CMArmorM3Medium
   id: CMArmorM3T
-  name: M3-T light armor
+  name: M3-T demolitionist armour
   description: A custom set of M3 armor designed for users of long-ranged explosive weaponry.
   components:
   - type: Sprite

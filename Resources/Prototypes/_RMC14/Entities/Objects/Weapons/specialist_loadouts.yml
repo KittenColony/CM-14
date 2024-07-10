@@ -103,3 +103,53 @@
     - type: GrenadeSpecWhitelist
   - type: RemoveOnlyStorage
   - type: FixedItemSizeStorage
+
+- type: entity
+  parent: BaseStorageItem
+  id: RMCRocketSpecEquipmentCase
+  name: Demolitionist equipment case
+  description: A large case containing your own personal state-of-last-deployment M5 RPG, M3-T demolitionist armor and helmet, several additional rockets and additional pieces of equipment.\n\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _RMC14/Objects/loadout_kits.rsi
+    layers:
+    - state: closed
+      map: [ base ]
+    - state: demo
+      map: [ demo ]
+  - type: Icon
+    sprite: _RMC14/Objects/loadout_kits.rsi
+    state: closed
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: open }
+          False: { state: closed }
+        grenadier:
+          True: { visible: false }
+          False: { visible: true }
+  - type: Item
+    size: Huge
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,30,1
+  - type: StorageFill
+    contents:
+    - id: CMWeaponLauncherM5 # check IFF
+    - id: RMCSatchelRocketSpec
+    - id: RMCSatchelRocketSpec
+    - id: RMCArmorM3T
+    - id: ArmorHelmetM10
+    - id: CMWeaponPistolMK80
+    - id: CMMagazinePistolMK80
+    - id: CMMagazinePistolMK80
+#    - id: CMBinoculars
+  - type: CMChangeUserOnVend
+    addComponents:
+    - type: RocketSpecWhitelist
+  - type: RemoveOnlyStorage
+  - type: FixedItemSizeStorage

@@ -19,8 +19,8 @@
     state: 84mmHE
 
 - type: entity
-  id: CMCartridgeRocket84HE
-  name: 84mm Rocket Solid Shot
+  id: CMCartridgeRocket84AP
+  name: 84mm Rocket Solid Shot # If someone wants to make an ACTUAL AP/AA rocket from 13 go ahead. This exists to fill its shoes
   parent: BaseItem
   description: A rocket tube without the standard warhead. In it's place is a solid penetrator made of depleted uranium and tungsten. Eviscerates the first thing it comes into contact with before spalling into harmless fragments 
   components:

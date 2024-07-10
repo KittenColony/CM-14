@@ -128,10 +128,13 @@
     whitelist:
       tags:
         - CMRocket84mm
-    proto: CMCartridgeRocket84HE
     capacity: 1
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: GunUserWhitelist
+    whitelist:
+      components:
+      - RocketSpecWhitelist
   - type: Appearance
   - type: Wieldable
   - type: GunRequiresWield
