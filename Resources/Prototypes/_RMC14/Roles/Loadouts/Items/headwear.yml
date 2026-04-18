@@ -121,6 +121,20 @@
     - RMCHeadUNMCHeadset
 
 - type: loadout
+  id: HeadCowboyLight
+  cost: 2
+  storage:
+    back:
+    - RMCHeadCowboyHatLight
+
+- type: loadout
+  id: HeadCowboyDark
+  cost: 2
+  storage:
+    back:
+    - RMCHeadCowboyHatDark
+
+- type: loadout
   id: HeadsetRoyalRMC
   cost: 2
   storage:

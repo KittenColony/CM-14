@@ -262,6 +262,8 @@
   - HeadBeanieGreenRMC
   - HeadBeanieGrayRMC
   - UNMCHeadsetRMC
+  - HeadCowboyLight
+  - HeadCowboyDark
 
 - type: loadoutGroup
   id: HeadwearRMCPVE
