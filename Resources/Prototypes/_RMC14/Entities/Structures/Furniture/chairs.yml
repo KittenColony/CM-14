@@ -143,7 +143,7 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: Rotatable
+  - type: Rotatable # Globetrotters
     rotateWhileAnchored: true
   - type: Sprite
     state: comfychair
@@ -223,7 +223,7 @@
 
 - type: entity
   parent: CMChairComfy
-  id: CMChairComfyAlpha
+  id: CMChairComfyAlpha # Globetrotters
   description: A simple chair permanently attached to the floor. Covered with a squeaky and way too hard faux-leather, unevenly painted in Alpha squad red. Only for the bravest and freshest Marine recruits.
   suffix: RMC|Alpha
   components:
@@ -232,7 +232,7 @@
 
 - type: entity
   parent: CMChairComfy
-  id: CMChairComfyBravo
+  id: CMChairComfyBravo # Globetrotters
   description: A simple chair permanently attached to the floor. Covered with a squeaky and way too hard faux-leather, unevenly painted in Bravo squad brown. Certified fortified on all sides from enemy incursion.
   suffix: RMC|Bravo
   components:
@@ -241,7 +241,7 @@
 
 - type: entity
   parent: CMChairComfy
-  id: CMChairComfyCharlie
+  id: CMChairComfyCharlie # Globetrotters
   description: A simple chair permanently attached to the floor. Covered with a squeaky and way too hard faux-leather, unevenly painted in Charlie squad purple. Feels out of place without a full breakfast to accompany it.
   suffix: RMC|Charlie
   components:
@@ -250,7 +250,7 @@
 
 - type: entity
   parent: CMChairComfy
-  id: CMChairComfyDelta
+  id: CMChairComfyDelta # Globetrotters
   description: A simple chair permanently attached to the floor. Covered with a squeaky and way too hard faux-leather, unevenly painted in Delta squad blue. This chair is most likely to be the first to fight and first to die.
   suffix: RMC|Delta
   components:
@@ -304,7 +304,9 @@
   parent: CMSeatBase
   id: CMChairOfficeDark
   name: dark office chair
-  components:
+  components: # Globetrotters
+  - type: Rotatable
+    rotateWhileAnchored: true
   - type: Sprite
     state: officechair_dark
   - type: Construction
